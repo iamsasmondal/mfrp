@@ -1,0 +1,38 @@
+button {
+  margin: 30px;
+}
+
+.logo img {
+  display: block;
+  height: 100px;
+  width: 150px;
+  margin: 0px auto;
+}
+
+.logo {
+  margin-bottom: 100px;
+}
+
+h1 {
+  text-align: center;
+}
+
+.loginForm{
+
+  max-width:30vw;
+}
+ 
+.login-head{
+
+font-size: 1.4em;
+font-weight: 700;
+
+}
+
+@media only screen and (max-width: 600px) {
+  .loginForm{
+
+    max-width:60vw;
+  }
+   
+}

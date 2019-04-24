@@ -1,0 +1,73 @@
+<div class="main">
+    <!-- Page Logo -->
+    <div class="logo">
+      <img src="../../assets/logo.jpg">
+      </div>
+      <!-- Page Header -->
+      
+      
+      <!-- Main Container Div: Includes text fields, buttons and links -->
+      <div class="container loginForm ">
+
+          <div class="login-head text-center">
+              Member's Login
+            </div>
+            <br />
+       
+          <!-- On form submission, redir() function is called along with the form data -->
+          <form method="post" (ngSubmit)="redir(userForm.value)" #userForm="ngForm">
+            <!-- Text Field for Username -->
+            <div class="form-group ">
+              <!-- <label for="uid" class="col-sm-2 col-form-label">Username</label> -->
+              <div class="">
+                  <!-- <label for="uid" class="col-sm-12 col-form-label">Username</label> -->
+
+                <input type="text" required class="form-control" id="uid" name="uid" placeholder="User Id" #nameREf="ngModel"
+                ngModel />
+                <br />
+                <!-- Checking for blank username field -->
+                <div *ngIf="nameREf.invalid && (nameREf.dirty || nameREf.touched||checkvalid)" class="alert alert-danger">
+                  <div *ngIf="nameREf.errors.required">
+                  UserId is mandatory
+                </div>
+                </div>
+              </div>
+            </div>
+            <!-- Text Field for Password -->
+            <div class="form-group  ">
+              <!-- <label for="pwd" class="col-sm-2 col-form-label">Password</label> -->
+              <div class="">
+                <input type="password" required class="form-control" id="pwd" name="pwd" placeholder="Enter Password" #pwdREf="ngModel"
+                ngModel />
+                <!-- Checking for blank password field -->
+                <div *ngIf="pwdREf.invalid && (pwdREf.dirty || pwdREf.touched||checkvalid)" class="alert alert-danger" id="customalert">
+                  <div *ngIf="pwdREf.errors.required">
+                  Password is mandatory
+                </div>
+                </div>
+              </div>
+            </div>
+            <!-- Sign In and Reset Button -->
+            <div class="text-center">
+              <button type="submit" value="" class="btn btn-primary">Sign In</button>
+              <button type="reset" value="" class="btn btn-danger">Reset</button>
+            </div>
+            <!-- Forgot Password and New Registration -->
+            <div class="text-center">
+              <a class="" href="login">Forgot
+              Password?</a>
+              <br />
+              <br />
+              <a class="" href="login">New
+              Registration</a>
+            </div>
+            <br/>
+            <br/>
+          </form>
+        
+      </div>
+      <!-- End of Main Container Div -->
+      <router-outlet></router-outlet>
+      <!-- Footer -->
+      <div style="position: fixed; bottom:0px; background-color: brown; width: 100%;height: 30px; color:white; text-align:center">Copyright
+      &copy; CTS India Pvt. Ltd. </div>

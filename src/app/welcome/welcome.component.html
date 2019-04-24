@@ -1,0 +1,51 @@
+<!-- Header -->
+<div class="navbar navbar-dark bg-dark">
+	<div class="container-fluid">
+		<div class="navbar-header">
+      <!-- Page Logo -->
+			<img class="logo" src="../../assets/logo.jpg">
+				<a class="navbar-brand" href="#">Home Page</a>
+      </div>
+      <!-- Logout Button -->
+			<div class="nav navbar-nav navbar-right logout">
+				<button class="btn-primary" data-toggle="modal" data-target="#exampleModal">Logout</button>
+			</div>
+    </div>
+    <!-- Modal Start -->
+		<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+          aria-hidden="true">
+			<div class="modal-dialog" role="document">
+				<div class="modal-content">
+					<div class="modal-header">
+						<h5 class="modal-title" id="exampleModalLabel">Logout</h5>
+						<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+							<span aria-hidden="true">&times;</span>
+						</button>
+					</div>
+					<div class="modal-body" style="text-align: left">
+						<p>Are you sure you want to logout?</p>
+					</div>
+					<div class="modal-footer">
+            <button type="button" class="btn btn-danger" data-dismiss="modal">Cancel</button>
+            <!-- On logout confirmation, logout() function is called -->
+						<button type="button" class="btn btn-success" (click)="logout()" data-dismiss="modal">Yes</button>
+					</div>
+				</div>
+			</div>
+    </div>
+    <!-- Modal End -->
+	</div>
+	<div class="container-fluid"></div>
+	<hr>
+		<div class="container" style="text-align:center; margin-top:200px">
+			<h2> Welcome 
+				<b> {{userid}}
+    </b>
+			</h2>
+    </div>
+    <!-- Footer -->
+		<div style="position: absolute;bottom:0px; background-color: brown; width: 100%;height: 30px; color:white; text-align:center">Copyright &copy; CTS India Pvt. Ltd. 2019 </div>
+  
+  
+  
+  
